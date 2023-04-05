@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.LiveSaleSettingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"
+            android:paddingVertical="10dp"
+            android:paddingEnd="10dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/text_black_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvSetting"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            android:text="Live Settings"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="20sp"
+            android:textColor="@color/text_black_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/llSetting"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/clTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvProductSetting"
+            app:cardCornerRadius="5dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivProductSetting"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@color/colorPrimary"
+                    app:tint="@color/text_black_color"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"/>
+
+                <TextView
+                    android:id="@+id/tvProductTitle"
+                    app:layout_constraintTop_toTopOf="@id/ivProductSetting"
+                    app:layout_constraintBottom_toBottomOf="@id/ivProductSetting"
+                    app:layout_constraintStart_toEndOf="@id/ivProductSetting"
+                    android:layout_marginStart="10dp"
+                    android:text="Product"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/view1"
+                    app:layout_constraintTop_toBottomOf="@id/tvProductTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view_line_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <TextView
+                    android:id="@+id/tvKeepingSelling"
+                    app:layout_constraintTop_toBottomOf="@id/view1"
+                    app:layout_constraintStart_toStartOf="@id/ivProductSetting"
+                    app:layout_constraintEnd_toStartOf="@id/switchKeepingSelling"
+                    android:text="Keeping Selling"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:textColor="@color/text_black_color"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Switch
+                    android:id="@+id/switchKeepingSelling"
+                    android:checked="false"
+                    app:layout_constraintEnd_toEndOf="parent "
+                    app:layout_constraintTop_toTopOf="@id/tvKeepingSelling"
+                    app:layout_constraintBottom_toBottomOf="@id/tvKeepingSelling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:padding="20dp"
+                    android:track="@drawable/track_selector"
+                    android:thumb="@drawable/brightness_1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOtherSetting"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivOtherSetting"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@color/colorPrimary"
+                    app:tint="@color/text_black_color"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"/>
+
+                <TextView
+                    android:id="@+id/tvOtherTitle"
+                    app:layout_constraintTop_toTopOf="@id/ivOtherSetting"
+                    app:layout_constraintBottom_toBottomOf="@id/ivOtherSetting"
+                    app:layout_constraintStart_toEndOf="@id/ivOtherSetting"
+                    android:layout_marginStart="10dp"
+                    android:text="Other"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/view2"
+                    app:layout_constraintTop_toBottomOf="@id/tvOtherTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view_line_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:id="@+id/llPercentAmount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llRbPercent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/rbPercent"
+                            android:gravity="center_vertical"
+                            android:checked="true"
+                            android:button="@null"
+                            android:clickable="false"
+                            android:background="@drawable/rb_selector"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+
+                        <TextView
+                            android:id="@+id/tvPercentLabel"
+                            android:layout_gravity="center_vertical"
+                            android:text="Percent"
+                            android:fontFamily="@font/inter_medium"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_black_color"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRbAmount"
+                        android:layout_marginStart="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/rbAmount"
+                            android:gravity="center_vertical"
+                            android:checked="false"
+                            android:button="@null"
+                            android:clickable="false"
+                            android:background="@drawable/rb_selector"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+
+                        <TextView
+                            android:id="@+id/tvAmountLabel"
+                            android:layout_gravity="center_vertical"
+                            android:text="Amount"
+                            android:fontFamily="@font/inter_medium"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_black_color"
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clQuantity"
+                    app:layout_constraintTop_toBottomOf="@id/llPercentAmount"
+                    app:layout_constraintEnd_toEndOf="@id/llPercentAmount"
+                    app:layout_constraintStart_toEndOf="@id/taxLabel"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilQuantity"
+                        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:hintEnabled="false"
+                        android:textColorHint="@color/text_grey_color"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:boxStrokeColor="@color/edittext_box_color"
+                        app:boxStrokeWidth="1.5dp"
+                        app:boxStrokeWidthFocused="1.5dp"
+                        app:endIconTintMode="screen"
+                        app:hintTextColor="@color/edittext_box_color"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etQuantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="@color/text_black_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp"
+                            tools:ignore="LabelFor" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/tvPcs"
+                        android:text="amt"
+                        app:layout_constraintTop_toTopOf="@id/tilQuantity"
+                        app:layout_constraintBottom_toBottomOf="@id/tilQuantity"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/text_grey_color"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/inter_medium"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="RelativeOverlap" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/taxLabel"
+                    app:layout_constraintStart_toStartOf="@id/ivOtherSetting"
+                    app:layout_constraintTop_toTopOf="@id/clQuantity"
+                    app:layout_constraintBottom_toBottomOf="@id/clQuantity"
+                    android:text="Tax"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:textColor="@color/text_black_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvMemberPoint"
+                    app:layout_constraintTop_toBottomOf="@id/clQuantity"
+                    app:layout_constraintStart_toStartOf="@id/ivOtherSetting"
+                    android:text="Member Point"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:textColor="@color/text_black_color"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Switch
+                    android:id="@+id/switchMemberPoint"
+                    android:checked="false"
+                    app:layout_constraintEnd_toEndOf="parent "
+                    app:layout_constraintTop_toTopOf="@id/tvMemberPoint"
+                    app:layout_constraintBottom_toBottomOf="@id/tvMemberPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:padding="20dp"
+                    android:track="@drawable/track_selector"
+                    android:thumb="@drawable/brightness_1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLiveSaleSetting"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivLiveSaleSetting"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@color/colorPrimary"
+                    app:tint="@color/text_black_color"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"/>
+
+                <TextView
+                    android:id="@+id/tvLiveSaleTitle"
+                    app:layout_constraintTop_toTopOf="@id/ivLiveSaleSetting"
+                    app:layout_constraintBottom_toBottomOf="@id/ivLiveSaleSetting"
+                    app:layout_constraintStart_toEndOf="@id/ivLiveSaleSetting"
+                    android:layout_marginStart="10dp"
+                    android:text="Live Sale"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/inter_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/view3"
+                    app:layout_constraintTop_toBottomOf="@id/tvLiveSaleTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view_line_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:id="@+id/tvLiveSaleSetting1"
+                    app:layout_constraintTop_toBottomOf="@id/view3"
+                    app:layout_constraintStart_toStartOf="@id/ivLiveSaleSetting"
+                    app:layout_constraintEnd_toStartOf="@id/switchLiveSaleSetting1"
+                    android:text="ဝယ်ယူသူဘက်မှ အော်ဒါတိုင်းကို ရောင်းချသူမှ ပယ်ဖျတ်မည်။"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/pyidaungsu_regular"
+                    android:textColor="@color/text_black_color"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Switch
+                    android:id="@+id/switchLiveSaleSetting1"
+                    android:checked="false"
+                    app:layout_constraintEnd_toEndOf="parent "
+                    app:layout_constraintTop_toTopOf="@id/tvLiveSaleSetting1"
+                    app:layout_constraintBottom_toBottomOf="@id/tvLiveSaleSetting1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:padding="20dp"
+                    android:track="@drawable/track_selector"
+                    android:thumb="@drawable/brightness_1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                <TextView
+                    android:id="@+id/tvLiveSaleSetting2"
+                    app:layout_constraintTop_toBottomOf="@id/tvLiveSaleSetting1"
+                    app:layout_constraintStart_toStartOf="@id/ivLiveSaleSetting"
+                    app:layout_constraintEnd_toStartOf="@id/switchLiveSaleSetting1"
+                    android:text="ယခင် Live များနှင့် Facebook Post များတွင် Live Code ဖြင့် စျေးဝယ်လို့ရသည်။"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/pyidaungsu_regular"
+                    android:textColor="@color/text_black_color"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Switch
+                    android:id="@+id/switchLiveSaleSetting2"
+                    android:checked="false"
+                    app:layout_constraintEnd_toEndOf="parent "
+                    app:layout_constraintTop_toTopOf="@id/tvLiveSaleSetting2"
+                    app:layout_constraintBottom_toBottomOf="@id/tvLiveSaleSetting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:padding="20dp"
+                    android:track="@drawable/track_selector"
+                    android:thumb="@drawable/brightness_1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                <TextView
+                    android:id="@+id/tvLiveSaleSetting3"
+                    app:layout_constraintTop_toBottomOf="@id/tvLiveSaleSetting2"
+                    app:layout_constraintStart_toStartOf="@id/ivLiveSaleSetting"
+                    app:layout_constraintEnd_toStartOf="@id/switchLiveSaleSetting3"
+                    android:text="Facebook Messenger တွင် Live Code ဖြင့် ‌စျေးဝယ်လို့ရသည်။"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/pyidaungsu_regular"
+                    android:textColor="@color/text_black_color"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Switch
+                    android:id="@+id/switchLiveSaleSetting3"
+                    android:checked="false"
+                    app:layout_constraintEnd_toEndOf="parent "
+                    app:layout_constraintTop_toTopOf="@id/tvLiveSaleSetting3"
+                    app:layout_constraintBottom_toBottomOf="@id/tvLiveSaleSetting3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:padding="20dp"
+                    android:track="@drawable/track_selector"
+                    android:thumb="@drawable/brightness_1"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
