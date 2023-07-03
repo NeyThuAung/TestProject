@@ -9,5 +9,22 @@
         android:id="@+id/liveSaleSettingFragment"
         android:name="com.mhs.testproject.fragment.LiveSaleSettingFragment"
         android:label="fragment_live_sale_setting"
-        tools:layout="@layout/fragment_live_sale_setting" />
+        tools:layout="@layout/fragment_live_sale_setting" >
+        <action
+            android:id="@+id/action_liveSaleSettingFragment_to_shopDooraDashBoardFragment"
+            app:destination="@id/shopDooraDashBoardFragment" />
+        <action
+            android:id="@+id/action_liveSaleSettingFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopDooraDashBoardFragment"
+        android:name="com.mhs.testproject.fragment.ShopDooraDashBoardFragment"
+        android:label="fragment_shop_doora_dash_board"
+        tools:layout="@layout/fragment_shop_doora_dash_board" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.mhs.testproject.fragment.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
 </navigation>

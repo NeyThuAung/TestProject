@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.mhs.testproject.R
+import com.mhs.testproject.adapter.FilterAdapter
 import com.mhs.testproject.databinding.FragmentTaxBottomSheetBinding
+import com.mhs.testproject.tempData.filterList
 
 
 class TaxBottomSheetFragment : BottomSheetDialogFragment() {
@@ -17,14 +19,17 @@ class TaxBottomSheetFragment : BottomSheetDialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentTaxBottomSheetBinding.inflate(layoutInflater,container,false)
-        return inflater.inflate(R.layout.fragment_tax_bottom_sheet, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
     }
+
 
 }

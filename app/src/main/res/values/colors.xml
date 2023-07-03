@@ -14,4 +14,8 @@
     <color name="view_line_color">#EEEEEE</color>
     <color name="button_color_blue">#2E6EFF</color>
     <color name="text_grey_color">#929292</color>
+    <color name="shopdoora_primary_color">#982CE4</color>
+    <color name="colorSecondary">#FFB001</color>
+    <color name="red">#FC4D4E</color>
+    <color name="background_red">#CD1512</color>
 </resources>

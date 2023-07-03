@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llFilterText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:visibility="gone"
+            android:id="@+id/civSelectedCircle"
+            android:src="@color/colorPrimary"
+            android:layout_marginEnd="10dp"
+            android:layout_width="5dp"
+            android:layout_height="5dp"/>
+
+        <TextView
+            android:id="@+id/tvFilterText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/civSelectedCircle"
+            tools:text="အားလုံး"
+            android:textColor="@color/text_black_color"
+            android:textSize="14sp"
+            android:fontFamily="@font/pyidaungsu_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvFilterDate"
+        app:layout_constraintTop_toTopOf="@id/llFilterText"
+        app:layout_constraintBottom_toBottomOf="@id/llFilterText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        tools:text="01 Jan 20 - 07 APR 23"
+        android:textSize="12sp"
+        android:textColor="@color/text_grey_color"
+        android:fontFamily="@font/inter_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/viewTop"
+        app:layout_constraintTop_toBottomOf="@id/llFilterText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        android:background="@color/view_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -361,6 +361,24 @@
 
         </androidx.cardview.widget.CardView>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbBottomSheet"
+            android:layout_marginTop="10dp"
+            android:text="BottomSheet"
+            android:layout_marginHorizontal="16dp"
+            app:cornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbGotoDashBoard"
+            android:layout_marginTop="10dp"
+            android:text="GotoDashBoard"
+            android:layout_marginHorizontal="16dp"
+            app:cornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
 
